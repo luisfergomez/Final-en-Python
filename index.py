@@ -49,4 +49,15 @@ class Operaciones:
     def validacion2(self):
        return len(self.var3.get()) != 0 and len(self.var3.get()) != 0 and len(self.var3.get()) != 0 and len(self.var5.get()) != 0 and len(self.var3.get()) != 0
 
+def botton1(self):
+        if self.validacion2():
+            dia=int(self.var3.get())
+            mes=int(self.var4.get())
+            año=int(self.var5.get())
+            hdia= format(dia, "0x" )
+            hmes= format(mes, "0x" ) 
+            haño= format(año, "0x" )
+            self.resultado['text'] = 'Fecha: {}/{}/{} Fecha en binario:{}/{}/{}'.format(dia,mes,año,hdia,hmes,haño)
+        else:
+            self.resultado['text'] = 'Poner datos en las casillas'
 
