@@ -49,7 +49,7 @@ class Operaciones:
     def validacion2(self):
        return len(self.var3.get()) != 0 and len(self.var3.get()) != 0 and len(self.var3.get()) != 0 and len(self.var5.get()) != 0 and len(self.var3.get()) != 0
 
-def botton1(self):
+    def botton1(self):
         if self.validacion2():
             dia=int(self.var3.get())
             mes=int(self.var4.get())
@@ -61,7 +61,7 @@ def botton1(self):
         else:
             self.resultado['text'] = 'Poner datos en las casillas'
 
-  def botton2(self):
+    def botton2(self):
         if self.validacion2():
             dia=int(self.var3.get())
             mes=int(self.var4.get())
@@ -73,5 +73,18 @@ def botton1(self):
             resultado= aañoss + mmeses + ddias
             self.resultado['text'] = 'Usted nació en {}/{}/{} y ha vivido {} horas'.format(dia,mes,año,resultado)
         else:
-            self.resultado['text'] = 'Poner datos en las casillas'          
+            self.resultado['text'] = 'Poner datos en las casillas'
 
+    def botton3(self): 
+        if self.validacion1():
+            nombre=str(self.var1.get())
+            apellido=str(self.var2.get())
+            numero_nombre=int(len(nombre))
+            numero_apellido=int(len(apellido))
+            sumatoria= numero_nombre + numero_apellido
+            if sumatoria %2==0 :
+               self.resultado['text'] = '{} {}, Su nombre junto con su apellido es par'.format(nombre,apellido)
+            else:
+                self.resultado['text'] = '{} {}, Su nombre junto con su apellido es impar'.format(nombre,apellido)
+        else:
+            self.resultado['text'] = 'Poner datos en las casillas'
