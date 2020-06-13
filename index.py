@@ -88,3 +88,25 @@ class Operaciones:
                 self.resultado['text'] = '{} {}, Su nombre junto con su apellido es impar'.format(nombre,apellido)
         else:
             self.resultado['text'] = 'Poner datos en las casillas'
+
+    def botton4(self):
+        if self.validacion1():
+            nombre=str(self.var1.get())
+            apellido=str(self.var2.get())
+            cuenta1 = 0
+            cuenta2 = 0
+            for num in nombre:
+                if num == 'a' or num =='A' or num =='e' or num =='E' or num =='i' or num=='I' or num=='o' or num=="O" or num=="u" or num=="U":
+                    cuenta1 += 1
+            for num in apellido:
+               if num == 'a' or num =='A' or num =='e' or num =='E' or num =='i' or num=='I' or num=='o' or num=="O" or num=="u" or num=="U":
+                  cuenta2 += 1
+            nom1=len(nombre)
+            apell2=len(apellido)
+            vocal1 = cuenta1
+            vocal2 = cuenta2
+            consonante1 = nom1-cuenta1 
+            consonante2 = apell2-cuenta2
+            self.resultado['text'] = '{} tiene {} vocales y {} consonantes Y {} tiene {} vocales y {} consonantes'.format(nombre,vocal1,consonante1,apellido,vocal2,consonante2)
+        else:
+            self.resultado['text'] = 'Poner datos en las casillas'
