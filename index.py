@@ -110,3 +110,17 @@ class Operaciones:
             self.resultado['text'] = '{} tiene {} vocales y {} consonantes Y {} tiene {} vocales y {} consonantes'.format(nombre,vocal1,consonante1,apellido,vocal2,consonante2)
         else:
             self.resultado['text'] = 'Poner datos en las casillas'
+
+    def botton5(self):
+        if self.validacion1():
+            nombre=str(self.var1.get())
+            apellido=str(self.var2.get())
+            nombre_invertido = ""
+            apellido_invertido1= ""
+            for letra in nombre:
+                nombre_invertido = letra + nombre_invertido
+            for letra1 in apellido:
+                apellido_invertido1 = letra1 + apellido_invertido1
+            self.resultado['text'] = '{} {} Al revés es: {} {}'.format(nombre,apellido,nombre_invertido,apellido_invertido1)
+        else:
+            self.resultado['text'] = 'Poner datos en las casillas'
