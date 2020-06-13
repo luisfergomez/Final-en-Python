@@ -57,7 +57,7 @@ class Operaciones:
             hdia= format(dia, "0x" )
             hmes= format(mes, "0x" ) 
             haño= format(año, "0x" )
-            self.resultado['text'] = 'Fecha: {}/{}/{} Fecha en binario:{}/{}/{}'.format(dia,mes,año,hdia,hmes,haño)
+            self.resultado['text'] = 'Fecha: {}/{}/{} Fecha en código hexadecimal:{}/{}/{}'.format(dia,mes,año,hdia,hmes,haño)
         else:
             self.resultado['text'] = 'Poner datos en las casillas'
 
