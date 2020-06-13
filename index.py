@@ -124,3 +124,9 @@ class Operaciones:
             self.resultado['text'] = '{} {} Al revés es: {} {}'.format(nombre,apellido,nombre_invertido,apellido_invertido1)
         else:
             self.resultado['text'] = 'Poner datos en las casillas'
+
+if __name__ == '__main__':
+    
+    window = Tk()
+    ope = Operaciones(window)
+    window.mainloop()
