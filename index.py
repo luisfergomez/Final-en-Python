@@ -61,3 +61,17 @@ def botton1(self):
         else:
             self.resultado['text'] = 'Poner datos en las casillas'
 
+  def botton2(self):
+        if self.validacion2():
+            dia=int(self.var3.get())
+            mes=int(self.var4.get())
+            año=int(self.var5.get())
+            aaños= 2019 - año
+            aañoss=24*(31*(aaños*12))
+            mmeses=24*(31*mes)
+            ddias=dia*24
+            resultado= aañoss + mmeses + ddias
+            self.resultado['text'] = 'Usted nació en {}/{}/{} y ha vivido {} horas'.format(dia,mes,año,resultado)
+        else:
+            self.resultado['text'] = 'Poner datos en las casillas'          
+
