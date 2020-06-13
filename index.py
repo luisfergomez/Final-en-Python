@@ -40,3 +40,13 @@ class Operaciones:
         ttk.Button(frame, text = 'Funcion 4', command = self.botton4).grid(row = 6, column = 4, sticky = W + E)
         ttk.Button(frame, text = 'Funcion 5', command = self.botton5).grid(row = 6, column = 5, sticky = W + E)
 
+        self.resultado = Label(self.wind, text = '', fg = 'red')
+        self.resultado.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)
+
+    def validacion1(self):
+        return len(self.var1.get()) != " " and len(self.var2.get()) != 0 and len(self.var3.get()) != " "
+
+    def validacion2(self):
+       return len(self.var3.get()) != 0 and len(self.var3.get()) != 0 and len(self.var3.get()) != 0 and len(self.var5.get()) != 0 and len(self.var3.get()) != 0
+
+
